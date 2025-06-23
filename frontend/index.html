@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Code Transpiler</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/editor/editor.main.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Python <span class="highlight">Transpiler</span></h1>
+      <div class="theme-control">
+        <button id="themeToggle" class="btn">Dark Mode</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="editor-section">
+        <div class="editor-box">
+          <div class="panel-header">
+            <h2>Python Code</h2>
+            <div class="status">Ready</div>
+          </div>
+          <div id="pythonEditor" class="editor"></div>
+          <div class="controls">
+            <div class="toggle-group">
+              <button id="convertToC" class="btn toggle active">C</button>
+              <button id="convertToCpp" class="btn toggle">C++</button>
+            </div>
+            <button id="clearBtn" class="btn action">Clear</button>
+            <button id="convertBtn" class="btn action">Transpile</button>
+          </div>
+        </div>
+
+        <div class="editor-box">
+          <div class="panel-header">
+            <h2>Output</h2>
+            <div class="status">Waiting</div>
+          </div>
+          <div id="outputEditor" class="editor"></div>
+          <div class="controls">
+            <button id="copyBtn" class="btn action">Copy</button>
+            <button id="downloadBtn" class="btn action">Download</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="log-panel">
+        <h3>Conversion Log</h3>
+        <div id="warnings">No warnings detected</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/loader.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
