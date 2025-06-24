@@ -36,7 +36,7 @@ A web-based tool that converts Python code to equivalent C and C++ code. The con
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone <Godzilla2405/Source_to_Source_Transpiler)>
 cd python-to-cpp-converter
 ```
 
